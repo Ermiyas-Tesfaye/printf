@@ -51,7 +51,7 @@ int _printf(const char *format, ...)
 				case 'b':
 					count += print_b(va_arg(args, unsigned int));
 					break;
-				default
+				default:
 					break;
 			}
 			i++;

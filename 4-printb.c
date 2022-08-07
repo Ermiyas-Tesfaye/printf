@@ -7,6 +7,7 @@
 int print_b(unsigned int num)
 {
 	int i = 1;
+
 	if (num != 1)
 		i += print_b(num / 2);
 	_putchar(num % 2);

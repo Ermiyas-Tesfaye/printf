@@ -1,10 +1,10 @@
 #include "main.h"
 /**
- * _printi - convert the base and print
+ * print_i - convert the base and print
  * @num: the given number in different radiux
  * Return: number of character
  */
-int _printi(int num)
+int print_i(int num)
 {
 	int decimal_d = 0;
 	int base = 1;
@@ -16,8 +16,4 @@ int _printi(int num)
 		base *= 8;
 	}
 	return (decimal_d);
-}
-int _printi(int num)
-{
-	
 }

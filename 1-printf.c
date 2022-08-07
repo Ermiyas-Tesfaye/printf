@@ -20,7 +20,8 @@ int print_str(char *str)
  */
 int _printf(const char *format, ...)
 {
-	int count = 0, int i, int skip, va_list args;
+	int count = 0, i, skip;
+	va_list args;
 
 	va_start(args, format);
 	for (i = 0; format[i] != '\0'; i++)
@@ -52,9 +53,9 @@ int _printf(const char *format, ...)
 					count += print_b(va_arg(args, unsigned int));
 					break;
 				default:
+					count += _putchar('%') + _putchar(format[i + skip]);
 					break;
-			}
-			i++;
+			} i++;
 		}
 	}
 	va_end(args);

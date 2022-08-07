@@ -22,6 +22,7 @@ int _printf(const char *format, ...)
 {
 	int count = 0;
 	int i;
+	int skip;
 	va_list args;
 
 	va_start(args, format);
@@ -31,7 +32,8 @@ int _printf(const char *format, ...)
 			count += _putchar(format[i]);
 		else if (format[i] == '%')
 		{
-			switch (format[i + 1])
+			for (skip = 1; format[i + skip] == ' '; skip++);
+			switch (format[i + skip])
 			{
 				case 'c':
 					count += _putchar(va_arg(args, int));

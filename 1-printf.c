@@ -42,9 +42,11 @@ int _printf(const char *format, ...)
 				count += print_d(va_arg(args, int));
 			else if (format[i + skip] == 'b')
 				count += print_b(va_arg(args, unsigned int));
+			else if (format[i + skip] == '\n')
+				count += _putchar('%') + print_space(skip);
 			else
-				count += _putchar('%') + _putchar(format[i + skip]);
-			i++;
+				count += _putchar('%') + print_space(1) + _putchar(format[i + skip]);
+			i += skip;
 		}
 	}
 	va_end(args);

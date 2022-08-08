@@ -52,6 +52,5 @@ int _printf(const char *format, ...)
 		}
 	}
 	va_end(args);
-	count += _putchar('\0');
 	return (count);
 }

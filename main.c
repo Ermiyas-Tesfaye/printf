@@ -20,8 +20,9 @@ int main(void)
 	addr = (void *)0x7ffe637541f0;
 	_printf("Length:[%d, %i]\n", len, len);
 	printf("Length:[%d, %i]\n", len2, len2);
-	_printf("Negative:[%d]\n", -762534);
-	printf("Negative:[%d]\n", -762534);
+	int a = _printf("Negative:[%d]\n", -762534);
+	int b = printf("Negative:[%d]\n", -762534);
+	printf("\n \n %d,  %d \n", a, b);
 	int z = _printf("Unsigned:[%u]\n", ui);
 	printf("z = %d\n", z);
 	printf("Unsigned:[%u]\n", ui);

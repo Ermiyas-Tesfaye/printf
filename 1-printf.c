@@ -32,30 +32,19 @@ int _printf(const char *format, ...)
 		{
 			for (skip = 1; format[i + skip] == ' ';)
 				skip++;
-			switch (format[i + skip])
-			{
-				case 'c':
-					count += _putchar(va_arg(args, int));
-					break;
-				case 's':
-					count += print_str(va_arg(args, char*));
-					break;
-				case '%':
-					count += _putchar('%');
-					break;
-				case 'd':
-					count += print_d(va_arg(args, int));
-					break;
-				case 'i':
-					count += print_i(va_arg(args, int));
-					break;
-				case 'b':
-					count += print_b(va_arg(args, unsigned int));
-					break;
-				default:
-					count += _putchar('%') + _putchar(format[i + skip]);
-					break;
-			} i++;
+			if (format[i + skip] == 'c')
+				count += _putchar(va_arg(args, int));
+			else if (format[i + skip] == 's')
+				count += print_str(va_arg(args, char*));
+			else if (format[i + skip] == '%')
+				count += _putchar('%');
+			else if (format[i + skip] == 'd' || format[i + skip] == 'i')
+				count += print_d(va_arg(args, int));
+			else if (format[i + skip] == 'b')
+				count += print_b(va_arg(args, unsigned int));
+			else
+				count += _putchar('%') + _putchar(format[i + skip]);
+			i++;
 		}
 	}
 	va_end(args);

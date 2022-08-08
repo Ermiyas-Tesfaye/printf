@@ -2,6 +2,7 @@
 /**
  * decimaltoO - decimal to octal
  * @num: int value
+ * @count: pointer to an int
  */
 void decimaltoO(unsigned int num, int *count)
 {

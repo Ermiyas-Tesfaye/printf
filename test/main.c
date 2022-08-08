@@ -42,8 +42,8 @@ int main(void)
 	printf("Len:[%d]\n", len2);
 	_printf("Unknown:[%r]\n");
 	printf("Unknown:[%r]\n");
-	n1 = _printf("%d\n", -762534);
-	n2 = printf("%d\n", -762534);
+	n1 = _printf("%d\n", NULL);
+	n2 = printf("%d\n", NULL);
 	printf("n1 is %d, n2 is %d\n", n1, n2);
 	return (0);
 }

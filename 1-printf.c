@@ -44,7 +44,7 @@ int _printf(const char *format, ...)
 				count += print_b(va_arg(args, unsigned int));
 			else if (format[i + skip] == '\0')
 				count += _putchar('%') + print_space(skip);
-			else 
+			else
 				count += _putchar('%') + _putchar(format[i + skip]);
 			i++;
 		}

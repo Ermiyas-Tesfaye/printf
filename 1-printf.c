@@ -53,9 +53,9 @@ int _printf(const char *format, ...)
 					count += print_b(va_arg(args, unsigned int));
 					break;
 				default:
+					count += _putchar('%') + _putchar(format[i + skip]);
 					break;
-			}
-			i++;
+			} i++;
 		}
 	}
 	va_end(args);

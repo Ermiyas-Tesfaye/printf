@@ -10,6 +10,7 @@
 int main(void)
 {
 	int len;
+	int z1, z2;
 	int len2;
 	unsigned int ui;
 	void *addr;
@@ -22,8 +23,9 @@ int main(void)
 	printf("Length:[%d, %i]\n", len2, len2);
 	_printf("Negative:[%d]\n", -762534);
 	printf("Negative:[%d]\n", -762534);
-	int z = _printf("Unsigned:[%u]\n", ui);
-	printf("z = %d\n", z);
+	z1 = _printf("Unsigned:[%u]\n", ui);
+	z2 = printf("Unsigned:[%u]\n", ui);
+	printf("z1 = %d, z2 = %d\n", z1, z2);
 	printf("Unsigned:[%u]\n", ui);
 	_printf("Unsigned octal:[%o]\n", ui);
 	printf("Unsigned octal:[%o]\n", ui);
@@ -33,6 +35,7 @@ int main(void)
 	printf("Character:[%c]\n", 'H');
 	_printf("String:[%s]\n", "I am a string !");
 	printf("String:[%s]\n", "I am a string !");
+	_printf("String in rot13:[%R]\n", "I am a string !");
 	_printf("Address:[%p]\n", addr);
 	printf("Address:[%p]\n", addr);
 	len = _printf("Percent:[%%]\n");

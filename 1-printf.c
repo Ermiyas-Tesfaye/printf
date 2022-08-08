@@ -46,6 +46,8 @@ int _printf(const char *format, ...)
 				count += _putchar(va_arg(args, int));
 			else if (format[i + skip] == 's')
 				count += print_str(va_arg(args, char*));
+			else if (format[i + skip] == 'R')
+				count += print_rot13(va_arg(args, char*));
 			else if (format[i + skip] == '%')
 				count += _putchar('%');
 			else if (format[i + skip] == 'd' || format[i + skip] == 'i')

@@ -8,4 +8,5 @@ int print_space(int skip);
 void print_ascii(unsigned int num, int *);
 void decimaltoO(unsigned int num, int *);
 void decimaltoH(unsigned int num, int *, char hex);
+int print_rot13(char *str);
 #endif

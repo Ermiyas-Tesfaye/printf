@@ -16,9 +16,7 @@ int print_str(char *str)
 			i += _putchar(str[i]);
 	}
 	else
-	{
 		i += print_str("(null)");
-	}
 	return (i);
 }
 /**
@@ -53,7 +51,7 @@ int _printf(const char *format, ...)
 			else if (format[i + skip] == 'd' || format[i + skip] == 'i')
 				count += print_d(va_arg(args, int));
 			else if (format[i + skip] == 'b')
-				count += print_b(va_arg(args, unsigned int));
+				print_b(va_arg(args, unsigned int), &count);
 			else if (format[i + skip] == '\0')
 				count += _putchar('%') + print_space(skip);
 			else if (format[i + skip] == 'u')

@@ -2,14 +2,13 @@
 /**
  * print_b - convert to binary and print
  * @num: unsigned int that converted to binary
- * Return: number of char printed
  */
-int print_b(unsigned int num)
+void print_b(unsigned int num, int *count)
 {
-	int i = 1;
-
-	if (num != 1)
-		i += print_b(num / 2);
-	_putchar(num % 2);
-	return (i);
+	if (num > 1)
+	{
+		print_b(num / 2, count);
+	}
+	(*count) += _putchar(num % 2 + '0');
+	
 }

@@ -21,11 +21,19 @@ int main(void)
 	addr = (void *)0x7ffe637541f0;
 	_printf("Length:[%d, %i]\n", len, len);
 	printf("Length:[%d, %i]\n", len2, len2);
+<<<<<<< HEAD
 	_printf("Negative:[%d]\n", -762534);
 	printf("Negative:[%d]\n", -762534);
 	z1 = _printf("Unsigned:[%u]\n", ui);
 	z2 = printf("Unsigned:[%u]\n", ui);
 	printf("z1 = %d, z2 = %d\n", z1, z2);
+=======
+	int a = _printf("Negative:[%d]\n", -762534);
+	int b = printf("Negative:[%d]\n", -762534);
+	printf("\n \n %d,  %d \n", a, b);
+	int z = _printf("Unsigned:[%u]\n", ui);
+	printf("z = %d\n", z);
+>>>>>>> a57727c4dc2294a30ea2c3c8c84cd8450a5c1dbc
 	printf("Unsigned:[%u]\n", ui);
 	_printf("Unsigned octal:[%o]\n", ui);
 	printf("Unsigned octal:[%o]\n", ui);

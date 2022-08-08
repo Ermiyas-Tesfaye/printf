@@ -10,5 +10,4 @@ void print_b(unsigned int num, int *count)
 		print_b(num / 2, count);
 	}
 	(*count) += _putchar(num % 2 + '0');
-	
 }

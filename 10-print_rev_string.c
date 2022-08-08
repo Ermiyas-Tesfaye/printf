@@ -17,8 +17,8 @@ int print_rev_str(char *str)
 		len = strlen(str);
 		while (len != 0)
 		{
-				i += _putchar(str[len - 1]);
-				len--;
+			i += _putchar(str[len - 1]);
+			len--;
 		}
 	}
 	else

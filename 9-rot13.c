@@ -24,7 +24,7 @@ int rot13(char c)
 	return (1);
 }
 /**
- * print_str - print a string
+ * print_rot13- print a string in reverse
  * @str: given string
  * Return: number of characters
  */
@@ -36,7 +36,7 @@ int print_rot13(char *str)
 	{
 		for (i = 0; str[i] != '\0'; )
 		{
-			if ((str[i] >= 'a'&& str[i] <= 'z') || (str[i] >= 'A'&& str[i] <= 'Z') )
+			if ((str[i] >= 'a' && str[i] <= 'z') || (str[i] >= 'A' && str[i] <= 'Z'))
 				i += rot13(str[i]);
 			else
 				i += _putchar(str[i]);

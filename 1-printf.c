@@ -30,6 +30,8 @@ int _printf(const char *format, ...)
 	{
 		if (format[i] != '%')
 			count += _putchar(format[i]);
+		if (format[i] == '\0')
+			break;
 		else if (format[i] == '%')
 		{
 			for (skip = 1; format[i + skip] == ' ';)

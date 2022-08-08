@@ -14,7 +14,7 @@ int print_d(int num)
 		num *= -1;
 	}
 	if (num / 10)
-		i += print_d(num / 10);
+		print_d(num / 10);
 	i += _putchar(num % 10 + '0');
 	return (i);
 }

@@ -23,6 +23,8 @@ int _printf(const char *format, ...)
 	int count = 0, i, skip;
 	va_list args;
 
+	if (!format)
+		return (-1);
 	va_start(args, format);
 	for (i = 0; format[i] != '\0'; i++)
 	{

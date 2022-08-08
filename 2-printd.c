@@ -10,11 +10,11 @@ int print_d(int num)
 
 	if (num < 0)
 	{
-		_putchar('-');
+		i += _putchar('-');
 		num *= -1;
 	}
 	if (num / 10)
-		i = print_d(num / 10);
-	_putchar(num % 10 + '0');
+		i += print_d(num / 10);
+	i += _putchar(num % 10 + '0');
 	return (i);
 }

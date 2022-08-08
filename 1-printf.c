@@ -1,5 +1,6 @@
 #include "main.h"
 #include <stdarg.h>
+#include <stdlib.h>
 /**
  * print_str - print a string
  * @str: given string
@@ -9,8 +10,15 @@ int print_str(char *str)
 {
 	int i = 0;
 
-	for (i = 0; str[i] != '\0'; )
-		i += _putchar(str[i]);
+	if (str != NULL)
+	{
+		for (i = 0; str[i] != '\0'; )
+			i += _putchar(str[i]);
+	}
+	else
+	{
+		i += print_str("(null)");
+	}
 	return (i);
 }
 /**

@@ -13,6 +13,8 @@ int main(void)
 	int len2;
 	unsigned int ui;
 	void *addr;
+	int n1;
+	int n2;
 
 	len = _printf("Let's try to printf a simple sentence.\n");
 	len2 = printf("Let's try to printf a simple sentence.\n");
@@ -40,5 +42,8 @@ int main(void)
 	printf("Len:[%d]\n", len2);
 	_printf("Unknown:[%r]\n");
 	printf("Unknown:[%r]\n");
+	n1 = _printf("Null is %s\n", NULL);
+	n2 = printf("Null is %s\n", NULL);
+	printf("n1 is %d, n2 is %d\n", n1, n2);
 	return (0);
 }

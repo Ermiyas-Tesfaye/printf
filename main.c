@@ -39,8 +39,8 @@ int main(void)
 	_printf("String in rot13:[%r]\n", "I am a string !");
 	_printf("Address:[%p]\n", addr);
 	printf("Address:[%p]\n", addr);
-	len = _printf("Percent:[%%]\n");
-	len2 = printf("Percent:[%%]\n");
+	len = _printf("Percent:[%d]\n", 254);
+	len2 = printf("Percent:[%d]\n", 254);
 	_printf("Len:[%d]\n", len);
 	printf("Len:[%d]\n", len2);
 	return (0);

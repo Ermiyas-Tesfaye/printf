@@ -2,6 +2,7 @@
 /**
  * print_b - convert to binary and print
  * @num: unsigned int that converted to binary
+ * @count: previous count to be increased
  */
 void print_b(unsigned int num, int *count)
 {

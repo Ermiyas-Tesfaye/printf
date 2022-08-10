@@ -12,8 +12,8 @@ int print_str(char *str)
 
 	if (str != NULL)
 	{
-		for (i = 0; str[i] != '\0'; )
-			i += _putchar(str[i]);
+		for (i = 0; str[i] != '\0'; ++i)
+			_putchar(str[i]);
 	}
 	else
 		i += print_str("(null)");

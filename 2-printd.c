@@ -1,7 +1,7 @@
 #include "main.h"
 /**
  * print_d - print integer value
- * @num: intiger value
+ * @num: integer value
  * Return: number of characters
  */
 int print_d(int num)
